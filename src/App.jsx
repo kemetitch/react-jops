@@ -13,7 +13,7 @@ import AddJob from "./pages/addJob";
 import EditJobPage from "./pages/EditJobPage";
 
 const App = () => {
-  // add job 
+  // add job
   const addJob = async (jobAdded) => {
     const res = await fetch("api/jobs", {
       method: "POST",
@@ -43,7 +43,7 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
         <Route
           path="/jobs/:id"
